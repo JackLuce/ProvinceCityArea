@@ -35,7 +35,9 @@
                 // alert(provinceOptions.val());//option的value
                 $("#addressId").val(firstAddress);*/
                 var firstAddress = $("#provinceId option:selected").text();
-                $("#addressId").val(firstAddress);
+                if(firstAddress!="选择省份"){
+                    $("#addressId").val(firstAddress);
+                }
             });
             /**
              * 根据市id列出对应县区
@@ -56,7 +58,9 @@
                 var firstAddress = $("#provinceId option:selected").text();
                 var secondAddress = $("#cityId option:selected").text();
                 var address = firstAddress+secondAddress;
-                $("#addressId").val(address);
+                if(firstAddress!="选择省份"&&secondAddress!="选择城市"){
+                    $("#addressId").val(address);
+                }
             });
 
             $("#areaId").change(function () {
@@ -71,7 +75,9 @@
                 var thirdAddress = $("#areaId option:selected").text();
                 var detailAddress = $("#detailAddressId").val();
                 var address = firstAddress+secondAddress+thirdAddress+detailAddress;
-                $("#addressId").val(address);
+                if(firstAddress!="选择省份"&&secondAddress!="选择城市"&&thirdAddress!="选择区域"){
+                    $("#addressId").val(address);
+                }
             }
         });
     </script>

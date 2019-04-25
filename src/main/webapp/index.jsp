@@ -29,10 +29,12 @@
                         $("#cityId").append(options);
                     }
                 });
-                //获取select下拉框的值
+                /*//获取select下拉框的值
                 var provinceOptions = $("#provinceId option:selected");
                 var firstAddress = provinceOptions.text();//option的text
                 // alert(provinceOptions.val());//option的value
+                $("#addressId").val(firstAddress);*/
+                var firstAddress = $("#provinceId option:selected").text();
                 $("#addressId").val(firstAddress);
             });
             /**
@@ -51,27 +53,26 @@
                         $("#areaId").append(options);
                     }
                 });
-                var address = $("#addressId").val();
+                var firstAddress = $("#provinceId option:selected").text();
                 var secondAddress = $("#cityId option:selected").text();
-                address +=secondAddress;
+                var address = firstAddress+secondAddress;
                 $("#addressId").val(address);
             });
 
             $("#areaId").change(function () {
-                var address = $("#addressId").val();
-                var thirdAddress = $("#areaId option:selected").text();
-                address +=thirdAddress;
-                $("#addressId").val(address);
+                getLastAddress();
             });
             $("#detailAddressId").change(function () {
+                getLastAddress();
+            });
+            function getLastAddress() {
                 var firstAddress = $("#provinceId option:selected").text();
                 var secondAddress = $("#cityId option:selected").text();
                 var thirdAddress = $("#areaId option:selected").text();
-                var address = firstAddress+secondAddress+thirdAddress;
                 var detailAddress = $("#detailAddressId").val();
-                address +=detailAddress;
+                var address = firstAddress+secondAddress+thirdAddress+detailAddress;
                 $("#addressId").val(address);
-            });
+            }
         });
     </script>
 </head>

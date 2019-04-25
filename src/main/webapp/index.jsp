@@ -79,6 +79,27 @@
                     $("#addressId").val(address);
                 }
             }
+
+            //时间选择器
+            $("#setUpCutdownTime").datetimepicker({
+                // format: 'YYYY-MM-DD HH:mm',
+                // format: 'YYYY-MM-DD',
+                format: 'YYYY-MM-DD HH:mm:ss',
+                locale: moment.locale('zh-CN'),
+            }).on('changeDate', function(ev){
+                alert("----------");
+            });
+        });
+        $(function () {
+            //时间选择器
+            $("#setUpTime").datetimepicker({
+                // format: 'YYYY-MM-DD HH:mm',
+                format: 'YYYY-MM-DD',
+                // format: 'YYYY-MM-DD HH:mm:ss',
+                locale: moment.locale('zh-CN'),
+            }).on('changeDate', function(ev){
+                alert("----------");
+            });
         });
     </script>
 </head>
@@ -123,6 +144,10 @@
                         <label for="detailAddressId">具体地址:</label>
                         <input type="text" data-placeholder="具体地址" name="detailAddress" id="detailAddressId" class="form-control">
                     </div>
+                    <div class="form-group has-success col-md-2" >
+                        <label for="setUpCutdownTime" class="control-label">设置倒计时:</label>
+                        <input style="float: right;width: 100%" type="text" name="setUpCutdownTime" id="setUpCutdownTime" class="form-control">
+                    </div>
                 </tbody>
                 <div class="form-group has-warning col-md-8">
                     <label for="addressId">您选择的地址:</label>
@@ -131,6 +156,10 @@
                 <div class="form-group has-error col-md-1">
                     <label for="do"></label>
                     <input type="button" value="确定" id="do" class="form-control">
+                </div>
+                <div class="form-group has-success col-md-2" >
+                    <label for="setUpTime" class="control-label">设置倒计时:</label>
+                    <input style="float: right;width: 100%" type="text" name="setUpTime" id="setUpTime" class="form-control">
                 </div>
             </form>
         </div>

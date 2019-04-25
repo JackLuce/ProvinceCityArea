@@ -36,9 +36,6 @@ public class ProvinceCityAreaController {
     @RequestMapping(value = "/index",method = RequestMethod.GET)
     public String getAllProvince(Model model, HttpServletRequest request){
         List<Province> provinceList = service.findAllProvince();
-        for (Province province: provinceList) {
-            System.out.println("省---11111111---"+province);
-        }
         model.addAttribute("provinceList",provinceList);
         return "index";
     }

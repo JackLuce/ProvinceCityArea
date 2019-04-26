@@ -36,7 +36,8 @@
                 $("#addressId").val(firstAddress);*/
                 var firstAddress = $("#provinceId option:selected").text();
                 if(firstAddress!="选择省份"){
-                    $("#addressId").val(firstAddress);
+                    $("#addressId").val(firstAddress.replace(/\s+/g, ""));
+                    //.replace(/\s+/g, "")去除所有空格
                 }
             });
             /**
@@ -59,7 +60,7 @@
                 var secondAddress = $("#cityId option:selected").text();
                 var address = firstAddress+secondAddress;
                 if(firstAddress!="选择省份"&&secondAddress!="选择城市"){
-                    $("#addressId").val(address);
+                    $("#addressId").val(address.replace(/\s+/g, ""));
                 }
             });
 
@@ -76,7 +77,7 @@
                 var detailAddress = $("#detailAddressId").val();
                 var address = firstAddress+secondAddress+thirdAddress+detailAddress;
                 if(firstAddress!="选择省份"&&secondAddress!="选择城市"&&thirdAddress!="选择区域"){
-                    $("#addressId").val(address);
+                    $("#addressId").val(address.replace(/\s+/g, ""));
                 }
             }
 

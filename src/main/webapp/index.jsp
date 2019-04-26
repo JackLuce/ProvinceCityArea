@@ -101,7 +101,11 @@
             }).on('changeDate', function(ev){
                 alert("----------");
             });
+
         });
+        function searchmap() {
+            window.location.href = "baidumap.jsp";
+        }
     </script>
 </head>
 <body>
@@ -163,6 +167,10 @@
                     <input style="float: right;width: 100%" type="text" name="setUpTime" id="setUpTime" class="form-control">
                 </div>
             </form>
+            <div class="form-group has-success col-md-2" >
+                <label for="searchmap" class="control-label">查看地图:</label>
+                <input style="float: right;width: 100%" type="button" value="查看地图" name="searchmap" id="searchmap" class="form-control" onclick="searchmap()">
+            </div>
         </div>
     </div>
 </div>

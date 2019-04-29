@@ -68,7 +68,7 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
-      <version>3.7</version>
+      <version>3.4</version>
     </dependency>
     <dependency>
       <groupId>commons-dbcp</groupId>
@@ -78,7 +78,7 @@
     <dependency>
       <groupId>com.mchange</groupId>
       <artifactId>mchange-commons-java</artifactId>
-      <version>0.2.14</version>
+      <version>0.2.15</version>
     </dependency>
     <!-- DAO层框架依赖：Mybatis依赖 -->
     <dependency>

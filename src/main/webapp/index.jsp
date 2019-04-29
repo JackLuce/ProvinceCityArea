@@ -106,6 +106,9 @@
         function searchmap() {
             window.location.href = "baidumap.jsp";
         }
+        function findme() {
+            window.location.href = "findme.jsp";
+        }
     </script>
 </head>
 <body>
@@ -170,6 +173,10 @@
             <div class="form-group has-success col-md-2" >
                 <label for="searchmap" class="control-label">查看地图:</label>
                 <input style="float: right;width: 100%" type="button" value="查看地图" name="searchmap" id="searchmap" class="form-control" onclick="searchmap()">
+            </div>
+            <div class="form-group has-success col-md-2" >
+                <label for="searchmap" class="control-label">找到我:</label>
+                <input style="float: right;width: 100%" type="button" value="找到我" name="findme" id="findme" class="form-control" onclick="findme()">
             </div>
         </div>
     </div>
